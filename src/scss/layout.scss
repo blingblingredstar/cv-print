@@ -1,0 +1,74 @@
+body {
+  font-size: 14px;
+}
+
+.cv,
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 6;
+}
+
+header,
+section,
+aside,
+.dev,
+.avatar,
+.name {
+  // background: #ddd;
+  --width: 6;
+  --gap-constant: 0.5%;
+  --initial-basis: calc(var(--width, 0) / var(--columns, 6) * 100%);
+  --gap: calc(
+    (var(--columns, 6) - var(--width, 0)) * var(--gap-constant, 0.3%)
+  );
+  flex-basis: calc(var(--initial-basis) - var(--gap));
+}
+
+.avatar {
+  --width: 3;
+}
+.name {
+  --width: 3;
+  margin: auto 0;
+}
+
+aside {
+  padding: 0 8%;
+  section {
+    margin: 1em 0;
+  }
+}
+
+.dev {
+  padding: 0 8%;
+  section {
+    margin: 1em 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cv {
+    max-width: 1000px;
+    margin: 1em auto;
+  }
+
+  aside {
+    --width: 2;
+    padding: 0 1%;
+  }
+  .dev {
+    --width: 4;
+    padding: 0 1%;
+  }
+
+  .avatar {
+    --width: 2;
+    padding: 0 1%;
+  }
+  .name {
+    --width: 4;
+    padding: 0 1%;
+  }
+}

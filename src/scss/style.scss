@@ -1,0 +1,189 @@
+@import "./layout.scss";
+$color-primary: #202f45;
+$color-secondary: #049bfb;
+$color-dark: #202f45;
+$color-light: #eaeaea;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:active,
+a:visited {
+  color: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background: $color-light;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+h3 {
+  opacity: 0.6;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 500;
+  margin: 1em 0 0.5em 0;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  color: $color-secondary;
+}
+h5 {
+  margin: 0.4em 0;
+  font-size: 1.1em;
+  color: $color-dark;
+}
+
+hr {
+  margin-bottom: 0.4em;
+  opacity: 0.5;
+  color: #7f8689;
+}
+
+strong {
+  color: $color-dark;
+  font-weight: 500;
+}
+
+li {
+  color: #545e6c;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.print,
+.design-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: $color-dark;
+  padding: 1em;
+  opacity: 0.5;
+}
+
+.cv {
+  background: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cv header {
+  background: $color-primary;
+  color: #fff;
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 80%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+  }
+}
+
+.name {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.info {
+  ul {
+    li {
+      display: flex;
+      flex-flow: row wrap;
+
+      strong,
+      span {
+        flex-basis: 50%;
+      }
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.education {
+  li {
+    &:first-of-type {
+      color: #3f4650;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    &:nth-of-type(2) {
+      font-size: 1em;
+    }
+    &:last-of-type {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  }
+}
+
+.project {
+  ul {
+    margin: 1em 0;
+    li {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 0.5em;
+
+      span,
+      strong {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .avatar {
+    position: relative;
+    bottom: -80px;
+  }
+  aside {
+    margin-top: 60px;
+  }
+}

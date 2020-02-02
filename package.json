@@ -1,0 +1,10 @@
+{
+  "name": "resume-print",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf ./dist/ && parcel build index.html --no-minify"
+  }
+}
