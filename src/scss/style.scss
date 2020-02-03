@@ -1,6 +1,6 @@
 @import "./layout.scss";
 $color-primary: #202f45;
-$color-secondary: #049bfb;
+$color-secondary: #374a68;
 $color-dark: #202f45;
 $color-light: #eaeaea;
 
@@ -26,6 +26,10 @@ a:visited {
 
 body {
   font-family: sans-serif;
+  // background: $color-light;
+}
+
+html {
   background: $color-light;
 }
 
@@ -70,10 +74,22 @@ h5 {
   color: $color-dark;
 }
 
+kbd {
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: inherit;
+  background-image: linear-gradient(top, #eee, #fff, #eee);
+  padding: 0.2em 0.4em;
+  margin: 0 0.2em;
+  white-space: nowrap;
+}
+
 hr {
-  margin-bottom: 0.4em;
-  opacity: 0.5;
-  color: #7f8689;
+  margin-bottom: 0.5em;
+  border: none;
+  border-bottom: 1px solid $color-secondary;
 }
 
 strong {
@@ -89,13 +105,7 @@ li {
 
 .print,
 .design-by {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8em;
-  color: $color-dark;
-  padding: 1em;
-  opacity: 0.5;
+  display: none;
 }
 
 .cv {
@@ -108,6 +118,32 @@ li {
   color: #fff;
   padding: 1em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cv aside {
+  background: #374a68;
+
+  h4 {
+    color: #b2bccd;
+  }
+
+  li {
+    color: #8096b9;
+    strong {
+      color: #94a2b9;
+    }
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid #b2bccd;
+  }
+
+  hr {
+    &:last-of-type {
+      border-bottom: 1px solid #374a68;
+    }
+  }
 }
 
 .avatar {
@@ -148,7 +184,6 @@ li {
 .education {
   li {
     &:first-of-type {
-      color: #3f4650;
       font-size: 1.1em;
       font-weight: 500;
     }
@@ -179,11 +214,27 @@ li {
 }
 
 @media (min-width: 1000px) {
+  .print,
+  .design-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: $color-dark;
+    padding: 1em;
+    opacity: 0.5;
+    margin: 1em auto;
+  }
+
+  .cv header {
+    padding: 0;
+  }
+
   .avatar {
     position: relative;
     bottom: -80px;
   }
   aside {
-    margin-top: 60px;
+    padding-top: 80px;
   }
 }
