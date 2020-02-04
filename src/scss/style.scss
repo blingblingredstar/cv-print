@@ -197,6 +197,24 @@ li {
   }
 }
 
+.contact {
+  li {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 0.5em;
+  }
+}
+
+.about-me {
+  p {
+    padding: 0.1em 0;
+  }
+}
+
 .project {
   ul {
     margin: 1em 0;
